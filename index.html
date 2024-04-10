@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./resources/styles/style.css" />
+    <!-- Font-Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font-Import -->
+    <title>My Cheatsheet</title>
+  </head>
+  <body>
+    <header id="home">
+      <div id="banner" style="background-image: url(./resources/images/htmlBackground.png);" style="background-position: center;" style="background-size: cover;">
+        <h1 id="headerB">©HEAT-O-SHEET</h1>
+        <nav class="crumbs">
+          <ol>
+            <li class="crumb"><a href="#home">Home</a></li>
+            <li class="crumb"><a href="#cheatsheet">Cheatsheet</a></li>
+            <li class="crumb"><a href="#disclaimer">Disclaimer</a></li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <p id="tableText">
+        This is a challenge project for the Codecademy "Full-Stack-Engineer
+        Career Path". In this sections I will show the different
+        <em>types</em> of embedding media.
+      </p>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3" id="cheatsheet"><h3>The Art Of Embedding</h3></th>
+            </tr>
+            <tr>
+              <th class="secondRow"><h4>Name</h4></th>
+              <th class="secondRow"><h4>Tag</h4></th>
+              <th class="secondRow"><h4>Description</h4></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="firstRow">
+              <td>Pictures</td>
+              <td class="mono">&lt;img&gt;</td>
+              <td>
+                <p>You can add and embed pictures as following:</p>
+                <br />
+                <p class="mono">
+                  &lt;img src="this is the source of the pic" alt="this is a
+                  description of the pic if it won't load" / &gt
+                </p>
+                <br />
+                <p>
+                  Please note that this is a self closing tag. Height and width
+                  can be styled either inside of the element or via CSS.<br />
+                  Always add an "alternative description" for accessibility
+                  reasons or a "title" for a mouseover description.
+                </p>
+                <br />
+                <p><u>The result:</u></p>
+                <br />
+                <img
+                  class="rick"
+                  src="./resources/images/RickAstley.png"
+                  alt="This is a picture of Rick Astley."
+                  title="A Picture of Rick Astley"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Videos</td>
+              <td class="mono">&lt;video&gt;</td>
+              <td>
+                <p>You can add and embed videos as following:</p>
+                <br />
+                <p class="mono">
+                  &lt;video controls width"xxx"&gt; <br />
+                  &lt;source src"the source of your video" / &gt; <br />
+                  Then you can add some information about the video if it's not
+                  being played by the browser for accessibility reasons. <br />
+                  &lt; /video&gt;
+                </p>
+                <br />
+                <p><u>The result:</u></p>
+                <br />
+                <video controls width="250px">
+                  <source src="./resources/videos/BeeEaterVid.mp4" type="video/mp4" />
+                  <p>This is video of a Kangaroo munching some greens</p>
+                </video>
+              </td>
+            </tr>
+            <tr>
+              <td>Audio</td>
+              <td class="mono">&lt;audio&gt;</td>
+              <td>
+                <p>You can add and embed audio as following:</p>
+                <br />
+                <p class="mono">
+                  &lt;audio controls&gt; <br />
+                  &lt;source src"the source of your audio" type="type of audio"/
+                  &gt; <br />
+                  Then you can add some information about the audio if it's not
+                  being played by the browser for accessibility reasons. <br />
+                  &lt; /audio&gt;
+                </p>
+                <br />
+                <p>
+                  Note that you can add a caption with the &lt;figure&gt;
+                  element to make the audio more descriptive.
+                </p>
+                <p><u>The result:</u></p>
+                <br />
+                <figure>
+                  <figcaption>
+                    Listen to the relaxing sound of windchimes:
+                  </figcaption>
+                  <audio controls>
+                    <source src="./resources/sounds/wind-chimes-bells-115747.mp3" type="audio/mp3" />
+                    <p>
+                      If you read this, your browser doesn't support the
+                      ogg-format-playback.
+                    </p>
+                  </audio>
+                </figure>
+              </td>
+            </tr>
+            <tr>
+              <td>Embed</td>
+              <td class="mono">&lt;embed&gt;</td>
+              <td>
+                <p>
+                  An old and more and more obsolete way of embedding different
+                  kinds of media is by using the &lt;embed&gt; element. <br />
+                  MDN says and I cite:
+                  <cite
+                    >"Keep in mind that most modern browsers have deprecated and
+                    removed support for browser plug-ins, so relying upon
+                    &lt;embed&gt; is generally not wise if you want your site to
+                    be operable on the average user's browser."</cite
+                  >
+                  <br />
+                  If you want to use it nevertheless, you can do as following:
+                </p>
+                <br />
+                <p class="mono">
+                  &lt;embed <br />
+                  type="type of media" <br />
+                  src="source of media"<br />
+                  title="descriptive title for accessibility"<br />
+                  width="xxx"<br />
+                  / &gt;
+                </p>
+                <p><u>The result:</u></p>
+                <embed
+                  type="video/mp4"
+                  src="./resources/videos/RickRolled.mp4"
+                  title="You got Rick-Rolled!"
+                  width="250px"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p id="disclaimer">
+        This cheatsheet was created by myself, Adrian Lesch. It's only reason of
+        existence is, that I can show what I've learned in the last five weeks.
+      </p>
+    </footer>
+  </body>
+</html>
