@@ -1,12 +1,10 @@
 # Cheat-O-Sheet Challenge Project
---------------------------------
 
 This was my first challenge project for the Codecademy Fullstack Engineer-Career Path.
 I was learning for five weeks up to that point and used all of my HTML and CSS knowlegde to design
 and create my first "own" website. Have fun!
 
 ## Here is the official project scope from the Codecademy website:
-------------------------------------------------------------------
 
 ### Challenge Project: Build Your Own Cheat Sheet
 #### Overview
